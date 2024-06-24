@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Review's page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">Flipzone</h2>
+            <ul class="navigations">
+                <li>Home</li>
+                <li>Products</li>
+                <li>Reviews</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Products">
+        <h1>Products</h1>
+        <div class="products">
+            <div class="product-info">
+                <img src="/logitech.jpg">
+                <h2>Logitech M170 wireless mouse</h2>
+                <p>Rs. 800</p>
+                <p>M170 is ready when you are. Simply plug the receiver into a USB port on 
+                   <br>your device to start working in seconds.Enjoy the world of wireless!</p>
+            </div>
+            <div class="review">
+                <form id="review1" onsubmit="submitReview(event, 'Logitech M170 wireless mouse')">
+                    <label for="rating" name="rating">Rate out of 5:</label>
+                    <input type="number" id="rating" name="rating" required>
+                    <label for="review" name="Review">Comments:</label>
+                    <input type="text" id="review" name="review" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+function submitReview(event, productName) {
+    event.preventDefault();
+
+
+    let rating = document.getElementById('rating').value;
+    let review = document.getElementById('review').value;
+
+
+    window.location.href = 'reviews.html';
+}
+
+    </script>
+</body>
+</html>
